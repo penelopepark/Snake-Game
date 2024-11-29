@@ -111,7 +111,37 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     }
     // displays the game over screen with final score as well as highscores
     private void showGameOver(Graphics g) {
+        //"Game Over" text
+        g.setColor(Color.red);
+        g.setFont(new Font("Arial", Font.BOLD, 75));
+        String gameOverText = "Game Over";
+        FontMetrics metrics1 = getFontMetrics(g.getFont());
+        g.drawString(gameOverText, (PANEL_WIDTH-metrics1.stringWidth(gameOverText))/2, (PANEL_HEIGHT/2)-50);
 
+        //score
+        g.setColor(Color.white);
+        g.setFont(new Font("Arial", Font.BOLD, 40));
+        String scoreText = "Score: " + applesEaten;
+        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        g.drawString(scoreText, (PANEL_WIDTH-metrics2.stringWidth(scoreText))/2, PANEL_HEIGHT/2);
+
+        // high scores
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        String highScoresText = "High Scores:";
+        FontMetrics metrics3 = getFontMetrics(g.getFont());
+        g.drawString(highScoresText, (PANEL_WIDTH-metrics3.stringWidth(highScoresText))/2, (PANEL_HEIGHT/2) + 50);
+
+        // retrieve + display high scores
+        java.util.List<Integer> highScores = highScoreManager.getHighScores();
+        for (int i = 0; i < highScores.size(); ++i) {
+            String hs = (i+1)+". "+highScores.get(i);
+            g.drawString(hs, (PANEL_WIDTH-metrics3.stringWidth(hs))/2, (PANEL_HEIGHT/2)+80+(i*30));
+        }
+        // restart
+        g.setFont(new Font("Arial", Font.PLAIN, 20));
+        String restartText = "Press ENTER to Restart!";
+        FontMetrics metrics4 = getFontMetrics(g.getFont());
+        g.drawString(restartText, (PANEL_WIDTH-metrics4.stringWidth(restartText))/2, (PANEL_HEIGHT/2)+200);
     }
     // updates game state on each tick of timer
     public void actionPerformed(ActionEvent e) {
