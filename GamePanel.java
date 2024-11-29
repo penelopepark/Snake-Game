@@ -85,6 +85,29 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     }
     // draws the snake, apple, score on panel
     private void drawGameElements(Graphics g) {
+        if (running) {
+            // apple
+            g.setColor(Color.red);
+            g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
+
+            // snake
+            for (int i = 0; i < bodyParts; ++i) {
+                if (i == 0) {
+                    g.setColor(Color.green);
+                    g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+                } else {
+                    g.setColor(new Color(45, 180, 0));
+                    g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+                }
+            }
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial", Font.BOLD, 20));
+            String scoreText = "Score: "+applesEaten;
+            FontMetrics metrics = getFontMetrics(g.getFont());
+            g.drawString(scoreText, (PANEL_WIDTH-metrics.stringWidth(scoreText))/2, g.getFont().getSize());
+        } else {
+            showGameOver(g);
+        }
     }
     // displays the game over screen with final score as well as highscores
     private void showGameOver(Graphics g) {
