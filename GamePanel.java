@@ -62,6 +62,19 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     }
     // spawns apple at random position not occupied by snake
     public void spawnApple() {
+        boolean validPosition = false;
+        while (!validPosition) {
+            appleX = (int)(Math.random()*(PANEL_WIDTH/UNIT_SIZE))*UNIT_SIZE;
+            appleY = (int)(Math.random()*(PANEL_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
+            validPosition = true;
+            // we make sure apple does not spawn on snake
+            for (int i = 0; i < bodyParts; ++i) {
+                if (x[i] == appleX && y[i] == appleY) {
+                    validPosition = false;
+                    break;
+                }
+            }
+        }
     }
     // paints the game components on the panel
     @Override
@@ -120,3 +133,4 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     public void keyTyped(KeyEvent e) {}
     @Override
     public void keyReleased(KeyEvent e) {}
+
