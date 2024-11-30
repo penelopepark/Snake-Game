@@ -1,2 +1,3 @@
-public class WeatherObserver {
+public interface WeatherObserver {
+    void updateWeather(Weather weather);
 }
