@@ -40,6 +40,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
 
         //observer to receive weather updates
         this.weatherService.registerObserver(this);
+        this.weatherService.fetchWeather();
 
         setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
         setBackground(Color.black);
@@ -154,16 +155,58 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     }
     // moves the snake in curr direction
     public void move() {
-
+        // shift the bodyparts
+        for (int i = bodyParts; i > 0; i--) {
+            x[i] = x[i - 1];
+            y[i] = y[i - 1];
+        }
+        //update head direction
+        switch (direction) {
+            case 'U':
+                y[0] -= UNIT_SIZE;
+                break;
+            case 'D':
+                y[0] += UNIT_SIZE;
+                break;
+            case 'L':
+                x[0] -= UNIT_SIZE;
+                break;
+            case 'R':
+                x[0] += UNIT_SIZE;
+                break;
+        }
     }
+
     // checks if snake has eaten the apple
     public void checkApple() {
-
+        if ((x[0] == appleX) && (y[0] == appleY)) {
+            bodyParts++;
+            applesEaten++;
+            spawnApple();
+            // CAN SPAWN ITEMS BASED ON WEATHER HERE - WOULD BE A COOL ADDITION
+        }
     }
+
     // verifies collisions with walls or snake's own body
     public void checkCollisions() {
-
+        // does head collide w body?
+        for (int i = bodyParts; i > 0; i--) {
+            if ((x[0] == x[i]) && (y[0] == y[i])) {
+                running = false;
+                break;
+            }
+        }
+        // wall collision
+        if (x[0] < 0 || x[0] >= PANEL_WIDTH || y[0] < 0 || y[0] >= PANEL_HEIGHT) {
+            running = false;
+        }
+        if (!running) {
+            timer.stop();
+            weatherTimer.cancel();
+            highScoreManager.addScore(applesEaten);
+        }
     }
+
     // handle weather update received from WeatherService (weather is the new weather object)
     public void updateWeather(Weather weather) {
 
