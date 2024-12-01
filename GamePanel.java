@@ -60,6 +60,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
 
     // initializes game variables and starts the game loop.
     public void startGame() {
+        spawnApple();
+        running = true;
+        timer = new javax.swing.Timer(INITIAL_DELAY, this);
+        timer.start();
     }
 
     // spawns apple at random position not occupied by snake
