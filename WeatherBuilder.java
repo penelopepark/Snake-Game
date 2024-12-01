@@ -1,4 +1,6 @@
-import org.json.*;
+import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 // responsible to construct a weather obj from JSON
 public class WeatherBuilder {
