@@ -108,7 +108,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
                     g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
                 }
             }
-            g.setColor(Color.white);
+            g.setColor(Color.black);
             g.setFont(new Font("Arial", Font.BOLD, 20));
             String scoreText = "Score: " + applesEaten;
             FontMetrics metrics = getFontMetrics(g.getFont());
@@ -128,7 +128,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
         g.drawString(gameOverText, (PANEL_WIDTH - metrics1.stringWidth(gameOverText)) / 2, (PANEL_HEIGHT / 2) - 50);
 
         //score
-        g.setColor(Color.white);
+        g.setColor(Color.black);
         g.setFont(new Font("Arial", Font.BOLD, 40));
         String scoreText = "Score: " + applesEaten;
         FontMetrics metrics2 = getFontMetrics(g.getFont());
@@ -150,7 +150,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
         g.setFont(new Font("Arial", Font.PLAIN, 20));
         String restartText = "Press ENTER to Restart!";
         FontMetrics metrics4 = getFontMetrics(g.getFont());
-        g.drawString(restartText, (PANEL_WIDTH - metrics4.stringWidth(restartText)) / 2, (PANEL_HEIGHT / 2) + 200);
+        g.drawString(restartText, (PANEL_WIDTH - metrics4.stringWidth(restartText)) / 2, (PANEL_HEIGHT / 2) + 250);
     }
 
     // updates game state on each tick of timer
