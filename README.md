@@ -45,7 +45,9 @@ whether it is a useful project for them.
 
 ## **Feedback**
 Feedbacks on this game can be submitted via the following methods:
+
 Google Forms: https://forms.gle/Khb1J76KpiRGqWuQ7
+
 Email: penelope.park@mail.utoronto.ca
 
 ### **Rules for Valid Feedback**
@@ -53,6 +55,15 @@ Email: penelope.park@mail.utoronto.ca
 2. Feedback should be specific and clear.
 3. Feedback should be given in a respectful tone :)
 
+### **Guidelines for Submitting Feedback**
+- **Bug Reports**
+  - Describe the problem
+  - Include possible steps for solution
+    
+- **Feature Requests**
+  - Explain the feature that can be created
+  - Suggest how it can work
+    
 ---
 
 ## **Contributions**
