@@ -1,3 +1,5 @@
+package weather;
+
 public interface WeatherService {
     void fetchWeather();
     void registerObserver(WeatherObserver observer);

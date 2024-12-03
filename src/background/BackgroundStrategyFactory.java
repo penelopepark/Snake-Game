@@ -1,4 +1,8 @@
-//creates appropriate BackgroundStrategy instances based on weather conditions.
+package background;
+
+import weather.Weather;
+
+//creates appropriate background.BackgroundStrategy instances based on weather conditions.
 public class BackgroundStrategyFactory {
 
     //creates and returns an instance of a background strategy based on the current weather object

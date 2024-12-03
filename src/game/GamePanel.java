@@ -1,3 +1,12 @@
+package game;
+
+import background.BackgroundStrategy;
+import background.BackgroundStrategyFactory;
+import background.DefaultBackgroundStrategy;
+import weather.WeatherService;
+import weather.WeatherObserver;
+import weather.Weather;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Timer;
@@ -29,7 +38,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
     private static final long WEATHER_UPDATE_INTERVAL = 10 * 60 * 1000; //weather timer updates every 10 min...
 
     /**
-     * GamePanel(weatherService, highScoreManager) constructs the game panel with various functionalities
+     * game.GamePanel(weatherService, highScoreManager) constructs the game panel with various functionalities
      *
      * @param weatherService   service to fetch weather data
      * @param highScoreManager manager for high scores
@@ -217,7 +226,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, We
         }
     }
 
-    // handle weather update received from WeatherService (weather is the new weather object)
+    // handle weather update received from weather.WeatherService (weather is the new weather object)
     @Override
     public void updateWeather(Weather weather) {
         System.out.println("WEATHER CALLED WITH CONDITION: " + weather.getMainCondition());

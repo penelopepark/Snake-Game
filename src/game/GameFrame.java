@@ -1,3 +1,7 @@
+package game;
+
+import weather.WeatherService;
+
 import javax.swing.JFrame;
 
 public class GameFrame extends JFrame {

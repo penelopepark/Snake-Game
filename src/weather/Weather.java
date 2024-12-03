@@ -1,3 +1,5 @@
+package weather;
+
 // weather object constructed from the JSON retrieved from API call
 public class Weather {
     private String cond;

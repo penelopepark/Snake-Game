@@ -1,3 +1,5 @@
+package weather;
+
 import java.util.*;
 import java.io.*;
 import java.net.*;

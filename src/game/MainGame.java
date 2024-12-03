@@ -1,3 +1,7 @@
+package game;
+
+import weather.WeatherService;
+import weather.OpenWeatherMapService;
 import javax.swing.SwingUtilities;
 
 public class MainGame {
