@@ -14,9 +14,9 @@ public class WeatherBuilder {
             JSONObject json = new JSONObject(jsonString);
             JSONArray weatherArray = json.getJSONArray("weather");
             JSONObject weatherObj = weatherArray.getJSONObject(0);
-            weather.setMainCondition(weatherObj.getString("java/main"));
+            weather.setMainCondition(weatherObj.getString("main"));
             weather.setDescription(weatherObj.getString("description"));
-            JSONObject main = json.getJSONObject("java/main");
+            JSONObject main = json.getJSONObject("main");
             weather.setTemperature(main.getDouble("temp"));
         } catch (JSONException e) {
             e.printStackTrace();
