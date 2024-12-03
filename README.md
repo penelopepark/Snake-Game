@@ -24,7 +24,7 @@ This game provides a fun and simple way to learn programming and implement desig
 
 ## **Features**
 ### **Real-time weather updates**
-  - Changing the location in `Main.java` will update the background of the game, according to the weather of the location in real-time.
+  - Changing the location in `MainGame.java` will update the background of the game, according to the weather of the location in real-time.
 
 ![Screenshot 2024-12-03 003525](https://github.com/user-attachments/assets/1fd1a276-3c11-4078-a03f-4edba4d92cbe)
 
@@ -39,16 +39,16 @@ This game provides a fun and simple way to learn programming and implement desig
 ---
 
 ## **Installation Instructions**
-1. Download and install IntelliJ IDEA.
+1. Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=windows).
 2. Clone this repository.
 3. Open project in IntelliJ IDEA.
 4. Configure the JDK.
-5. Run the game.
+5. Run the game in `MainGame.java`.
 ---
 
 ## **Usage Guide**
 
-After running the game in `Main.java`, use arrow keys to move the snake (up, down, left, or right). Collect food to gain points and increase the length of the snake.
+After running the game in `MainGame.java`, use arrow keys to move the snake (up, down, left, or right). Collect food to gain points and increase the length of the snake. Once the game is over, press enter to restart!
 
 ---
 
@@ -78,6 +78,7 @@ Email: penelope.park@mail.utoronto.ca
 - **Feature Requests**
   - Explain the feature that can be created
   - Suggest how it can work
+  - Explain what it would solve / be helpful for
     
 ---
 
