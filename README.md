@@ -24,7 +24,15 @@ whether it is a useful project for them.
 ---
 
 ## **Features**
+### **Real-time weather updates**
+  - Changing the location in `Main.java` will update the background of the game, according to the weather of the location in real-time.
 
+### **Automatic score updates on the top of the screen during gameplay**
+  - The score of the player increases automatically, as food is collected.
+ 
+### **Highscore system**
+  - Players can see the highscore rank after the game ends.
+  
 ---
 
 ## **Installation Instructions**
@@ -36,6 +44,8 @@ whether it is a useful project for them.
 ---
 
 ## **Usage Guide**
+
+After running the game in `Main.java`, use arrow keys to move the snake (up, down, left, or right). Collect food to gain points and increase the length of the snake.
 
 ---
 
@@ -67,3 +77,7 @@ Email: penelope.park@mail.utoronto.ca
 ---
 
 ## **Contributions**
+1. Fork this repository.
+2. Create a new branch.
+3. Make changes.
+4. Submit pull request.
