@@ -42,7 +42,7 @@ This game provides a fun and simple way to learn programming and implement desig
 1. Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=windows).
 2. Clone this repository.
 3. Open project in IntelliJ IDEA.
-4. Configure the JDK.
+4. Configure the JDK using instructions [here](https://www.jetbrains.com/help/idea/sdk.html#manage_sdks).
 5. Run the game in `MainGame.java`.
 ---
 
