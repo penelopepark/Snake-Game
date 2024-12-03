@@ -28,7 +28,11 @@ whether it is a useful project for them.
 ---
 
 ## **Installation Instructions**
-
+1. Download and install IntelliJ IDEA.
+2. Clone this repository.
+3. Open project in IntelliJ IDEA.
+4. Configure the JDK.
+5. Run the game.
 ---
 
 ## **Usage Guide**
