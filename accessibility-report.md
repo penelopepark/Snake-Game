@@ -12,14 +12,19 @@
 - rules of the game are straightforward: collecting food to grow length of snake while avoiding collisions
 
 ## **Perceptible Information**
-- the game 
+- the game has clear visual cues (snake changing directions)
+- uses a bright green colour for the snake, to make it stand out
+- game over text shown in large, red font
 
 ## **Tolerance for Error**
 - the game ends when the snake collides with the wall or itself, but restarting is easy and quick
+- can learn easily from mistakes
 
 ## **Low Physical Effort**
 - can play the game with just the arrow keys
 - playing the game may be difficult for people with physical disabilities
+- can add features like voice commands to control the snake for people who cannot
+use the keyboard directly
 
 ## **Size and Space for Approach and Use**
 - the game's UI is easy to see on most screens
