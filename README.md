@@ -44,7 +44,7 @@ This game provides a fun and simple way to learn programming and implement desig
    The recommended JDK is the 17 JDKs.
 3. Clone this repository.
 4. Open project in IntelliJ IDEA.
-5. Run the game in `MainGame.java`
+5. Run the game in `MainGame.java`.
    
 ---
 
