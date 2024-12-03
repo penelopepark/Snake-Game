@@ -6,10 +6,9 @@
 ## **Summary**
 A classic snake game where players control a snake to collect food, grow longer, and avoid collisions.
 
-This game was made bc...
+This game was made to explore fundamental concepts of programming, such as object-oriented design, clean architecture, SOLID principles, and more.
 
-Gives the user a general sense of what problem this project solves and
-whether it is a useful project for them.
+This game provides a fun and simple way to learn programming and implement design patterns.
 
 ---
 
@@ -27,12 +26,16 @@ whether it is a useful project for them.
 ### **Real-time weather updates**
   - Changing the location in `Main.java` will update the background of the game, according to the weather of the location in real-time.
 
+![Screenshot 2024-12-03 003525](https://github.com/user-attachments/assets/1fd1a276-3c11-4078-a03f-4edba4d92cbe)
+
 ### **Automatic score updates on the top of the screen during gameplay**
   - The score of the player increases automatically, as food is collected.
  
 ### **Highscore system**
   - Players can see the highscore rank after the game ends.
-  
+    
+  ![Screenshot 2024-12-03 003657](https://github.com/user-attachments/assets/deb20f6f-ed24-47e0-bd6e-757826c8f70e)
+
 ---
 
 ## **Installation Instructions**
