@@ -54,6 +54,8 @@ After running the game in `Main.java`, use arrow keys to move the snake (up, dow
 
 ## **License**
 
+This project is licensed under the CC0 1.0 Universal (Creative Commons Zero v1.0 Universal) license.
+
 ---
 
 ## **Feedback**
